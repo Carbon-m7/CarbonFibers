@@ -58,7 +58,6 @@ public class CrSettingsActivity extends PreferenceActivity implements ButtonBarH
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        hasDeviceTools = getResources().getBoolean(R.bool.has_device_tools);
         defaultLocale = Locale.getDefault();
         Log.i(TAG, "defualt locale: " + defaultLocale.getDisplayName());
         setLocale();
@@ -197,11 +196,6 @@ public class CrSettingsActivity extends PreferenceActivity implements ButtonBarH
         ArrayList<Header> toRemove = new ArrayList<Header>();
         for (int i = 0; i < headers.size(); i++) {
             Header header = headers.get(i);
-            if (header.id == R.id.device_tools) {
-                if (!hasDeviceTools) {
-                    toRemove.add(header);
-                }
-            }
         }
         for (int i = 0; i < toRemove.size(); i++) {
             headers.remove(toRemove.get(i));

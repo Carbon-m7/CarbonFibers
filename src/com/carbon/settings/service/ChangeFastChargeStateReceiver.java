@@ -1,4 +1,4 @@
-package com.carbon.settings.service;
+/**package com.carbon.settings.service;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -28,4 +28,4 @@ public class ChangeFastChargeStateReceiver extends BroadcastReceiver {
                 ExternalCommandService.class)
                 .putExtra("cmd", "echo " + value + " > " + fCHargePath));
     }
-}
+}**/

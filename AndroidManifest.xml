@@ -2,7 +2,6 @@
     package="com.carbon.settings"
     android:sharedUserId="android.uid.system" >
 
-    <uses-sdk android:minSdkVersion="18"/>
     <original-package android:name="com.carbon.settings" />
 
     <uses-permission android:name="android.permission.REBOOT" />
@@ -43,21 +42,30 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".fragments.inter.InterfaceTab"
+            android:label="@string/user_interface" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.carbon.settings.SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".fragments.MoreDeviceSettings"
+            android:label="@string/more_device_controls_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.carbon.settings.SHORTCUT" />
+              </intent-filter>
+        </activity>
+        <!--activity
             android:name=".device.DeviceTools"
             android:label="@string/device_tools_title" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.carbon.settings.SHORTCUT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".fragments.inter.InterfaceTab"
-            android:label="@string/user_interface" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="com.carbon.settings.SHORTCUT" />
             </intent-filter>
         </activity>
@@ -152,15 +160,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".fragments.MoreDeviceSettings"
-            android:label="@string/more_device_controls_title" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="com.carbon.settings.SHORTCUT" />
-              </intent-filter>
-        </activity>
-        <activity
             android:name=".fragments.halo.HaloTab"
             android:label="@string/halo_title">
             <intent-filter>
@@ -207,7 +206,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="com.carbon.settings.SHORTCUT" />
             </intent-filter>
-        </activity>
+        </activity-->
         <activity
  	    android:name=".ShareToClipboard"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
